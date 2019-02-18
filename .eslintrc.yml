@@ -1,0 +1,18 @@
+extends: 'eslint:recommended'
+rules:
+  indent:
+    - 2
+    - 4
+  quotes:
+    - 2
+    - backtick
+  linebreak-style:
+    - 2
+    - unix
+  no-console: "off"
+env:
+  es6: true
+  node: true
+parserOptions:
+  ecmaVersion: 6
+  sourceType: "module"
