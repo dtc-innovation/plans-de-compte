@@ -5,7 +5,7 @@ rules:
     - 4
   quotes:
     - 2
-    - backtick
+    - single
   linebreak-style:
     - 2
     - unix
@@ -16,3 +16,9 @@ env:
 parserOptions:
   ecmaVersion: 6
   sourceType: "module"
+overrides:
+  - 
+    files:
+      - "tests/automated/*.js"
+    env: 
+      mocha: true

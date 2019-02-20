@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentBudgetaire xsi:schemaLocation="http://www.minefi.gouv.fr/cp/demat/docbudgetaire Actes_budgetaires___Schema_Annexes_Bull_V15\DocumentBudgetaire.xsd" xmlns="http://www.minefi.gouv.fr/cp/demat/docbudgetaire" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <VersionSchema V="65"/>
+   <BlocEditeur>
+      <CodeEditeur V="CGI"/>
+   </BlocEditeur>
+   <VersionOutil outil="DSC_COMMON" version="22"/>
+   <VersionOutil outil="REMAT" version="21_2013"/>
+   <Scellement md5="ac3dd80b8246d3f054cd1191acde279f" sha1="b09f05022342ced71eba1b7396f56301e9459edc" date="2014-04-17T10:34:07"/>
+   <EnTeteDocBudgetaire>
+      <DteStr V="2014-02-25"/>
+      <LibellePoste V="Payeur Départemental"/>
+      <IdPost V="33090"/>
+      <LibelleColl V="DEPARTEMENT DE LA GIRONDE"/>
+      <IdColl V="22330001300016"/>
+      <NatCEPL V="Départements"/>
+   </EnTeteDocBudgetaire>
+   <Budget>
+      <EnTeteBudget>
+         <LibelleEtab V="BUDGET PRINCIPAL"/>
+         <IdEtab V="22330001300016"/>
+         <CodColl V="001"/>
+         <CodBud V="00"/>
+         <Nomenclature V="M52-M52"/>
+      </EnTeteBudget>
+      <BlocBudget>
+         <NatDec V="09"/>
+         <Exer V="2013"/>
+         <DteDec V="2012-12-21"/>
+         <DteDecEx V="2012-12-21"/>
+         <NatVote V="FcIc"/>
+         <OpeEquip V="false"/>
+         <TypProv V="1"/>
+         <BudgPrec V="1"/>
+         <ReprRes V="1"/>
+         <NatFonc V="3"/>
+         <PresentationSimplifiee V="false"/>
+         <CodTypBud V="P"/>
+         <IdEtabPal V="22330001300016"/>
+      </BlocBudget>
+      <InformationsGenerales>
+         <Information Code="DtDelibAmort1An" V="24/10/2003"/>
+         <Information Code="LieuCommDoc" V="Hôtel du Département-Esplanade Charles de Gaulle 33074 Bordeaux cedex"/>
+         <Information Code="MoyNatFin" V="654,43"/>
+         <Information Code="MoyNatFin4T" V="654,43"/>
+         <Information Code="MtAmort1An" V="150"/>
+         <Information Code="PopTot" V="1513860"/>
+         <Information Code="PotFin" V="878997587"/>
+         <Information Code="PotFisc" V="749875137"/>
+         <Information Code="ValCoefMobPotFisc" V="0,99"/>
+         <Information Code="ValDepEq" V="94,91"/>
+         <Information Code="ValDepEqB" V="10,49"/>
+         <Information Code="ValDepFoncRemDette" V="94,25"/>
+         <Information Code="ValDepPers" V="17,61"/>
+         <Information Code="ValDepRFonc" V="829,05"/>
+         <Information Code="ValDGFPop" V="138,94"/>
+         <Information Code="ValEncDettePop" V="397,7"/>
+         <Information Code="ValEncDetteRecFonc" V="43,95"/>
+         <Information Code="ValHab" V="1513860"/>
+         <Information Code="ValProdImpo" V="283,08"/>
+         <Information Code="ValRecRFonc" V="907,97"/>
+      </InformationsGenerales>
+      <LigneBudget>
+         <Nature V="13272"/>
+         <Fonction V="61"/>
+         <ArtSpe V="false"/>
+         <CodRD V="R"/>
+         <MtBudgPrec V="0.00"/>
+         <MtRARPrec V="0.00"/>
+         <MtPropNouv V="0.00"/>
+         <MtPrev V="0.00"/>
+         <CredOuv V="0.00"/>
+         <MtReal V="0.00"/>
+         <MtRAR3112 V="0.00"/>
+         <OpBudg V="0"/>
+         <MtSup Code="ProdChaRat" V="0.00"/>
+      </LigneBudget>
+   </Budget>
+</DocumentBudgetaire>
