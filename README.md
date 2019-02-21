@@ -15,4 +15,4 @@ Trouve des documents budgétaires dans `dir1`, à partir de ces fichiers, s'assu
 
 ## Exemple
 
-`npm start -- -i node_modules -o def`
+`npm start -- -i input -o output`

@@ -7,7 +7,7 @@
     "plans-de-compte": "./bin/index.js"
   },
   "scripts": {
-    "start": "node -r esm bin/plans-de-compte.js -i tests/automated/data -o /tmp",
+    "start": "node -r esm bin/plans-de-compte.js",
     "test": "mocha -r esm tests/automated",
     "fix": "eslint . --fix"
   },
