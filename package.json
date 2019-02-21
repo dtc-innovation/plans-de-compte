@@ -26,6 +26,7 @@
     "commander": "^2.19.0",
     "esm": "^3.2.5",
     "fs-extra": "^7.0.1",
+    "got": "^9.6.0",
     "node-xml-stream-parser": "^1.0.7"
   },
   "devDependencies": {
