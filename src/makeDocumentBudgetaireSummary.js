@@ -43,8 +43,6 @@ export default function(docBudgStream){
 
         resolve(Promise.all([normeP, annéeP])
             .then(([{norme, sousNorme}, année]) => {
-                console.log('yep', {norme, sousNorme, année})
-
                 p.end()
                 return {norme, sousNorme, année}
             })

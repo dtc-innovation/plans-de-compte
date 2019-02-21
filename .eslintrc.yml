@@ -3,6 +3,7 @@ rules:
   indent:
     - 2
     - 4
+    - MemberExpression: "off"
   quotes:
     - 2
     - single

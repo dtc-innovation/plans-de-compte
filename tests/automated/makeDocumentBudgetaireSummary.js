@@ -2,13 +2,13 @@ import { join } from 'path'
 import { createReadStream } from 'fs'
 import { strict as assert } from 'assert';
 
-import getPlanDeCompteData from '../../src/getPlanDeCompteData.js'
+import makeDocumentBudgetaireSummary from '../../src/makeDocumentBudgetaireSummary.js'
 
 
-describe('getPlanDeCompteData', () => {
+describe('makeDocumentBudgetaireSummary', () => {
 
     it('should work on a simple example', () => {
-        return getPlanDeCompteData(createReadStream(join(__dirname, 'data', 'doc-budg-simple.xml')))
+        return makeDocumentBudgetaireSummary(createReadStream(join(__dirname, 'data', 'doc-budg-simple.xml')))
             .then(data => {
                 assert.equal(data.norme, 'M52', 'norme');
                 assert.equal(data.sousNorme, 'M52', 'sous-norme');
