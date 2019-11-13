@@ -40,7 +40,7 @@ const existingFilesInOutDirP = readdir(outDir)
     if(err.code === 'ENOENT'){
         console.warn(`Le dossier de sortie n'existe pas, il va être créé`)
         return mkdir(
-            isAbsolute(outDir) ? outDir : join(process.env.PWD, outDir), 
+            isAbsolute(outDir) ? outDir : join(process.cwd(), outDir), 
             { recursive: true }
         )
         .then(() => [])
@@ -63,7 +63,7 @@ const neededPlanDeCompteByURLP = readdir(inDir)
 })
 .then(docBudgFiles => {
     console.log(`Fichiers <DocumentBudgetaire> trouvés dans le dossier ${inDir} :`)
-    console.log(docBudgFiles.map(f => `- ${relative(process.env.PWD, f)}`).join('\n'))
+    console.log(docBudgFiles.map(f => `- ${relative(process.cwd(), f)}`).join('\n'))
 
     return Promise.all(docBudgFiles.map(f => makeDocumentBudgetaireSummary(createReadStream(f))))
     .then(summaries => new Map(summaries.map(s => [documentBudgetaireSummaryToPlanDeCompteURL(s), s])))
@@ -90,7 +90,7 @@ Promise.all([neededPlanDeCompteByURLP, existingFilesInOutDirP])
 
     return Promise.all(absentNeededPlanDeComptes.map(({url, filename}) => {
         const absoluteFilename = join(
-            isAbsolute(outDir) ? '' : process.env.PWD,
+            isAbsolute(outDir) ? '' : process.cwd(),
             outDir,
             filename
         );
