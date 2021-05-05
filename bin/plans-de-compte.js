@@ -113,6 +113,6 @@ Promise.all([neededPlanDeCompteByURLP, existingFilesInOutDirP])
     }))
 
 })
-.then(() => console.log(`Ayé, c'est fini !`))
+.then(() => console.log(`Ayé, plans-de-compte a terminé avec succès !`))
 
 
