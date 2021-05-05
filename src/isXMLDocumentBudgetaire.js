@@ -1,13 +1,13 @@
-import { open, read, close } from 'fs-extra';
+import { open } from 'fs/promises';
 
 
 export default function(filename){
     return open(filename, 'r')
-    .then(fd => {
+    .then(fh => {
         let result;
         const buffer = Buffer.alloc(500);
 
-        return read(fd, buffer, 0, buffer.length, 0)
+        return fh.read(buffer, 0, buffer.length, 0)
         .then(({buffer}) => {
             const str = buffer.toString()
 
@@ -22,7 +22,7 @@ export default function(filename){
                 throw err;
             }
         })
-        .then(() => close(fd))
+        .then(() => fh.close())
         .then(() => result)
     })
 

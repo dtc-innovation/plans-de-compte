@@ -1,9 +1,11 @@
-import { join } from 'path'
+import { join, dirname } from 'path'
 import { createReadStream } from 'fs'
 import { strict as assert } from 'assert';
+import { fileURLToPath } from 'url';
 
 import makeDocumentBudgetaireSummary from '../../src/makeDocumentBudgetaireSummary.js'
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 describe('makeDocumentBudgetaireSummary', () => {
 

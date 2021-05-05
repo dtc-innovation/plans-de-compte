@@ -2,15 +2,20 @@
   "name": "plans-de-compte",
   "version": "1.0.0",
   "description": "Un outil pour récupérer des plans de compte à partir de &lt;DocumentBudgetaire>s",
-  "main": "index.js",
+  "main": "bin/plans-de-compte.js",
+  "type": "module",
   "bin": {
-    "plans-de-compte": "./bin/index.js"
+    "plans-de-compte": "./bin/plans-de-compte.js"
   },
   "scripts": {
-    "start": "node -r esm bin/plans-de-compte.js",
-    "test": "mocha -r esm tests/automated",
+    "start": "node bin/plans-de-compte.js",
+    "test": "mocha tests/automated",
     "fix": "eslint . --fix"
   },
+  "engines": {
+    "node": ">=14"
+  },
+  "engineStrict": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dtc-innovation/plans-de-compte.git"
@@ -24,13 +29,11 @@
   "homepage": "https://github.com/dtc-innovation/plans-de-compte#readme",
   "dependencies": {
     "commander": "^2.19.0",
-    "esm": "^3.2.5",
-    "fs-extra": "^7.0.1",
     "got": "^9.6.0",
     "node-xml-stream-parser": "^1.0.7"
   },
   "devDependencies": {
     "eslint": "^5.14.1",
-    "mocha": "^5.2.0"
+    "mocha": "^8.3.2"
   }
 }
