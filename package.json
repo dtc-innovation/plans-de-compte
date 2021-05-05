@@ -29,7 +29,7 @@
   "homepage": "https://github.com/dtc-innovation/plans-de-compte#readme",
   "dependencies": {
     "commander": "^2.19.0",
-    "got": "^9.6.0",
+    "got": "^11.8.2",
     "node-xml-stream-parser": "^1.0.7"
   },
   "devDependencies": {
