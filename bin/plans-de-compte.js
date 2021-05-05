@@ -1,13 +1,17 @@
+#!/usr/bin/env node
+
 import {join, isAbsolute, relative} from 'path';
 
-import { readdir, createReadStream, createWriteStream, mkdir } from 'fs-extra';
 import got from 'got';
 import program from 'commander'
 
 import isXMLDocumentBudgetaire from '../src/isXMLDocumentBudgetaire.js'
 import makeDocumentBudgetaireSummary from '../src/makeDocumentBudgetaireSummary.js'
 
-import { version } from '../package.json'
+import { readFile, readdir, mkdir } from 'fs/promises';
+import { createReadStream, createWriteStream } from 'fs';
+
+const { version } = JSON.parse(await readFile(new URL('../package.json', import.meta.url)));
 
 function documentBudgetaireSummaryToPlanDeCompteURL({norme, sousNorme, année}){
     return `http://odm-budgetaire.org/composants/normes/${année}/${norme}/${sousNorme}/planDeCompte.xml`
@@ -109,6 +113,6 @@ Promise.all([neededPlanDeCompteByURLP, existingFilesInOutDirP])
     }))
 
 })
-.then(() => console.log(`Ayé, c'est fini !`))
+.then(() => console.log(`Ayé, plans-de-compte a terminé avec succès !`))
 
 
